@@ -4,83 +4,65 @@
     <meta charset="utf-8">
     <title>Matching Game</title>
     <meta name="description" content="">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/regular.css" integrity="sha384-FKw7x8fCxuvzBwOJmhTJJsKzBl8dnN9e2R4+pXRfYoHivikuHkzWyhKWDSMcGNK8" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/fontawesome.css" integrity="sha384-vd1e11sR28tEK9YANUtpIOdjGW14pS87bUBuOIoBILVWLFnS+MCX9T6MMf0VdPGq" crossorigin="anonymous">
     <link rel="stylesheet" href="css/app.css">
 </head>
-<body>
+<body class="body-element">
 
     <div class="container">
+      <div id="page-wrap">
         <header>
             <h1>Matching Game</h1>
         </header>
 
         <section class="score-panel">
-        	<ul class="stars">
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
+          <ul class="stars">
+        		<li><i class="fas fa-star fa-lg"></i></li>
+        		<li><i class="fas fa-star fa-lg"></i></li>
+        		<li><i class="fas fa-star fa-lg"></i></li>
         	</ul>
+          <span class="timer">Moves : </span>
+          <span class="moves"></span>
+          <span class="timer"> Time :
+            <span class="hours">0</span> :
+            <span class="minutes">0</span> :
+            <span class="seconds">0</span>
+          </span>
 
-        	<span class="moves">3</span> Moves
-
-            <div class="restart">
-        		<i class="fa fa-repeat"></i>
-        	</div>
+          <span class="restart">
+        		<i class="fa fa-repeat fa-lg"></i>
+        	</span>
         </section>
-
         <ul class="deck">
-            <li class="card" id="card1">
-                <i class="fa"></i>
-            </li>
-            <li class="card" id="card2">
-                <i class="fa"></i>
-            </li>
-            <li class="card" id="card3">
-                <i class="fa"></i>
-            </li>
-            <li class="card" id="card4">
-                <i class="fa"></i>
-            </li>
-            <li class="card" id="card5">
-                <i class="fa"></i>
-            </li>
-            <li class="card" id="card6">
-                <i class="fa"></i>
-            </li>
-            <li class="card" id="card7">
-                <i class="fa"></i>
-            </li>
-            <li class="card" id="card8">
-                <i class="fa"></i>
-            </li>
-            <li class="card" id="card9">
-                <i class="fa"></i>
-            </li>
-            <li class="card" id="card10">
-                <i class="fa"></i>
-            </li>
-            <li class="card" id="card11">
-                <i class="fa"></i>
-            </li>
-            <li class="card" id="card12">
-                <i class="fa"></i>
-            </li>
-            <li class="card" id="card13">
-                <i class="fa"></i>
-            </li>
-            <li class="card" id="card14">
-                <i class="fa"></i>
-            </li>
-            <li class="card" id="card15">
-                <i class="fa"></i>
-            </li>
-            <li class="card" id="card16">
-                <i class="fa"></i>
-            </li>
         </ul>
     </div>
+        <div class="modal" id="modal-wrap">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="close-icon">
+                <i class="far fa-window-close fa-lg"></i>
+              </div>
+              <h2>Congratulations! You Win!!</h2>
 
-    <script src="js/app.js"></script>
+            </div>
+            <div class="modal-body">
+              <h3 class="stats">Your Game Stats</h3>
+                <p class="moveStats">Moves</p>
+                <p class="rating">Stars</p>
+                <p class="time">Time</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn modal-button close-modal">Close</button>
+              <button type="button" class="btn btn-default modal-button play-again">Play Again?</button>
+
+            </div>
+          </div>
+        </div>
+  </div>
+  <script src="js/app.js"></script>
 </body>
 </html>
