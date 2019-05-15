@@ -138,7 +138,7 @@ li { list-style-type: none }
   position: fixed;
   z-index: 50; /*sits on top of the game deck */
   width: 60%;
-  height: 55%;
+  height: 60%;
   padding: 50px;
   top:50%;
   left:50%;
