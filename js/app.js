@@ -42,7 +42,6 @@ let cards = ["fa-diamond", "fa-diamond",
 
 initialize();
 
-
 /**
  * @description initialize - Game begins with this function
  */
@@ -74,7 +73,6 @@ function shuffle(array) {
   return array;
 }
 
-
 /**
  *  @description createGameDeck -
  * For each card in the deck create a new 'li'
@@ -98,7 +96,6 @@ function createGameDeck() {
   const deckOfCards = document.querySelector('.deck');
   deckOfCards.appendChild(fragment);
 }
-
 
 /**
  * @description start - Create an event listener for clicking of a card
@@ -164,7 +161,6 @@ function cardClicked (target, openCardList) {
  * @param  {event} openCard     card to be added to list
  * @param  {array} openCardList list of open cards
  */
- // add the card to a *list* of "open" cards
 async function addCard(openCard,openCardList) {
   // if openCardList array has one card
   if(openCardList && openCardList.length > 0 && openCardList.length < 3){
@@ -236,7 +232,6 @@ function isMatch(openCardList) {
                       })
   return isMatchFound;
 }
-
 
 /* Game Stats maintaining functions */
 /**
@@ -422,9 +417,6 @@ function reset() {
   gameTime = 0;
   firstClick = true;
   gameStart;
-  hr = 0;
-  min = 0;
-  secs = 0;
   updateMoves();
   updatePairs();
 }
